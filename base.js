@@ -31,6 +31,9 @@ function MyBlog(){
 
 MyBlog.prototype.createItem = function(text){
 
+	if (text == "")
+		return ;
+	
 	this.entries.push(text);
 
 	this.generateListItem(this.$entry);
